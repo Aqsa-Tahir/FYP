@@ -64,7 +64,7 @@ const HotDeals = () => {
     <div>
        <div className="bg-cover bg-center bg-pink-200 z-20 relative mt-0">
         <h2  data-aos="zoom-out-right"  className="text-4xl font-bold  py-10 text-pink-900 text-center">Hot Deals</h2>
-        <div data-aos="zoom-out-down" className="grid grid-cols-4 gap-2 justify-items-center">
+        <div data-aos="zoom-out-down" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 justify-items-center">
           {hotDeals.map((product) => (
             <div key={product.id} className="product p-10 border border-gray-300 rounded-md shadow-md bg-white">
               <img src={product.image} alt={product.name} className="w-full h-36 w-36 object-cover mb-4 rounded-md" />

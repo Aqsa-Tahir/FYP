@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -22,10 +23,10 @@ const Header = () => {
               <a href="/services" className="hover:underline font-bold">Products</a>
               {isDropdownOpen && (
                 <ul className="absolute z-50 bg-pink-500 border rounded-md py-4 mt-2 space-y-2">
-                  <li><a href="/Hot Deals" className="block px-4 py-2 text-white hover:bg-pink-400">Hot Deals</a></li>
-                  <li><a href="#" className="block px-4 py-2 text-white hover:bg-pink-400">New Arrivals</a></li>
-                  <li><a href="#" className="block px-4 py-2 text-white hover:bg-pink-400">Our Brands</a></li>
-                  <li><a href="#" className="block px-4 py-2 text-white hover:bg-pink-400">Accessories</a></li>
+                  <li><a href="hotdeals" className="block px-4 py-2 text-white hover:bg-pink-400">Hot Deals</a></li>
+                  <li><a href="topsellings" className="block px-4 py-2 text-white hover:bg-pink-400">New Arrivals</a></li>
+                  <li><a href="order" className="block px-4 py-2 text-white hover:bg-pink-400">Our Brands</a></li>
+                  <li><a href="/services" className="block px-4 py-2 text-white hover:bg-pink-400">Accessories</a></li>
                 </ul>
               )}
             </li>

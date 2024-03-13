@@ -50,7 +50,7 @@ const Brand = () => {
       <h2 className="text-5xl font-bold mb-4 text-center text-pink-500" data-aos="fade-down"
      data-aos-easing="linear"
      data-aos-duration="1500">Our Brands</h2>
-      <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4" data-aos="fade-up"
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" data-aos="fade-up"
      data-aos-duration="3000">
         {brandData.map((brand, index) => (
           <li key={index} className="bg-white rounded-2xl p-4 text-center">

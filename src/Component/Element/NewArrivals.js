@@ -38,7 +38,7 @@ const NewArrivals = () => {
         <h2  data-aos="zoom-out-right"  className="text-4xl font-bold mb-8 text-pink-900 text-center">New Arrivals</h2>
         <div data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000" className="grid grid-cols-4 gap-2 justify-items-center">
+     data-aos-duration="2000" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 justify-items-center">
           {newArrivals.map((product) => (
             <div key={product.id} className="bg-white rounded-lg p-10 text-center">
               <img src={product.image} alt={product.name} className="w-32 h-32 mb-4 mx-auto" />

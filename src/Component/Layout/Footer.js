@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="bg-pink-700 text-white p-8">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="w-1/4 bg-pink-700 p-4 rounded-lg">
+      <div className="container mx-auto flex flex-wrap justify-between items-center">
+        <div className="w-full sm:w-1/2 lg:w-1/4 bg-pink-700 p-4 rounded-lg mb-4 sm:mb-0">
           <h2 className="text-4xl font-bold hover:text-blue-600">Quick Links</h2>
           <ul className="mt-2">
             <li>
@@ -27,12 +27,12 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-1/4 bg-pink-700 p-4 rounded-lg">
+        <div className="w-full sm:w-1/2 lg:w-1/4 bg-pink-700 p-4 rounded-lg mb-4 sm:mb-0">
           <h2 className="text-4xl font-bold hover:text-blue-600">Contact Us</h2>
           <p className="mt-2">AL-NISA Shopping near Airport, Rawalpindi</p>
           <p>Email: AlNisa123@gmail.com</p>
         </div>
-        <div className="w-1/4 bg-pink-700 p-4 rounded-lg">
+        <div className="w-full sm:w-1/2 lg:w-1/4 bg-pink-700 p-4 rounded-lg mb-4 sm:mb-0">
           <h2 className="text-4xl font-bold hover:text-blue-600">Follow Us</h2>
           <div className="flex space-x-6 mt-2">
             <a href="#" className="text-gray-400 hover:text-blue-600">
@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mt-16 text-center bg-gray-900 p-4 rounded-lg">
+      <div className="mt-8 sm:mt-16 text-center bg-gray-900 p-4 rounded-lg">
         <p className="text-sm">&copy; 2023 My React App. All rights reserved.</p>
       </div>
     </footer>

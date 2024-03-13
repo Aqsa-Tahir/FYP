@@ -11,7 +11,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setBackgroundIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
@@ -30,7 +30,7 @@ const Hero = () => {
           </h1>
           <h1 className="text-3xl font-bold mb-4 text-pink-600">AL-NISA</h1>
           <p className="text-lg mb-8">Discover amazing products and more...</p>
-          <div className="flex space-x-4 ml-56">
+          <div className="flex space-x-4 ml-64">
             <Link to="/login">
               <button data-aos="zoom-in-up" className="bg-red-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-xl">
                 Login
@@ -40,6 +40,7 @@ const Hero = () => {
               <button data-aos="zoom-in-up" className="bg-red-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-xl">
                 Register
               </button>
+              
             </Link>
           </div>
         </div>
