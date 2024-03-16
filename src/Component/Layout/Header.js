@@ -43,6 +43,9 @@ const Header = () => {
         <button className="bg-pink-400 text-white px-3 py-1 rounded-xl hover:bg-pink-900 mb-2">
           Search
         </button>
+        <button className="bg-pink-400 text-white px-3 py-1 rounded-lg hover:bg-pink-900 mb-2 mx-2">
+          <a href='/login'>login</a>
+        </button>
       </div>
     </div>
   );

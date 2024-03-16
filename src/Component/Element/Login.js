@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+//import { useHistory } from 'react-router-dom';
+
 
 const Login = () => {
+ // const history = useHistory(); 
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -29,10 +34,12 @@ const Login = () => {
     if (Object.keys(validationErrors).length === 0) {
       // Form is valid, handle login logic here
       console.log('Form data submitted:', formData);
+      toast.success('Login successful!');
     } else {
       // Set validation errors
       setErrors(validationErrors);
     }
+    //history.push('/');
   };
 
   return (
@@ -72,14 +79,15 @@ const Login = () => {
           />
           {errors.password && <div className="text-red-500 text-sm mt-1">{errors.password}</div>}
         </div>
-
+        
         <button
           type="submit"
           className="w-full bg-pink-500 text-white p-2 rounded-2xl hover:bg-pink-600"
         >
           Login
         </button>
-      </form>
+        <a href='/register' className='flex justify-center items-center text-md font-semibold hover:text-pink-600'>Register...</a>
+      </form><ToastContainer />
     </div>
     </div>
   );

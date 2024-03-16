@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import firebase from "../Element/Firebase";
+import { app, auth } from '../Element/Firebase'; 
+
+
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -40,12 +44,24 @@ const Registration = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       // Form is valid, handle registration logic here
-      console.log('Form data submitted:', formData);
-    } else {
-      // Set validation errors
-      setErrors(validationErrors);
-    }
-  };
+      firebase.auth().createUserWithEmailAndPassword(formData.email, formData.password)
+      .then((userCredential) => {
+        // Signed up successfully
+        const user = userCredential.user;
+        console.log('User registered:', user);
+      })
+      .catch((error) => {
+        // Handle errors
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error('Registration error:', errorMessage);
+      });
+  } else {
+    // Set validation errors
+    setErrors(validationErrors);
+  }
+};
+  
 
   return (
     <div className='bg-cover bg-center h-screen ' style={{ backgroundImage: "url('./Assets/3.jpg')" }} >
@@ -123,6 +139,7 @@ const Registration = () => {
         >
           Register
         </button>
+        <a href='/login'  className="flex justify-center items-center text-md font-semibold hover:text-pink-600 ">Already have an account? Login...</a>
       </form>
     </div>
     </div>
